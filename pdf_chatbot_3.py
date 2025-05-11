@@ -40,7 +40,7 @@ def hash_file(file_bytes):
 # ✅ Fixed: Use BytesIO to avoid seek error
 @st.cache_data(show_spinner=False)
 def extract_pdf_components_bytes(file_bytes):
-    elements = partition_pdf(file=BytesIO(file_bytes))  # ✅ FIXED
+    elements = partition_pdf(file=BytesIO(file_bytes), strategy="fast")  # ✅ Use fast strategy to avoid layout model
     text_chunks, table_chunks = [], []
     for el in elements:
         if el.category == "NarrativeText":
@@ -175,7 +175,7 @@ if query:
 
     # Store the conversation in chat history
     st.session_state["chat_history"].append({"question": query, "answer": response})
-    
+
     st.write(response)
 
 # Display chat history
