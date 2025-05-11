@@ -1,10 +1,19 @@
+# Core UI
 streamlit
+
+# PDF parsing (without layout or OCR features)
 unstructured[pdf]
 pdfminer.six
 PyMuPDF
 pypdf
+
+# Embedding and semantic search
 sentence-transformers
 chromadb
-google-generativeai
+
+# API calls (Groq, Gemini)
 requests
+google-generativeai
+
+# .env support
 python-dotenv
