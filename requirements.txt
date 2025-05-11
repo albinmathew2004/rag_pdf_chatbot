@@ -1,34 +1,10 @@
-# Core UI
 streamlit
-
-# PDF parsing with full support for images, tables, and OCR
-unstructured[all-docs]
+unstructured[pdf]
 pdfminer.six
 PyMuPDF
 pypdf
-pi-heif
-
-# Image handling
-Pillow
-opencv-python
-
-# OCR (used internally by unstructured if needed)
-pytesseract
-
-# Sentence embeddings for vector similarity
 sentence-transformers
-
-# Vector DB for storing and querying embeddings
 chromadb
-
-# Gemini API (Google Generative AI SDK)
 google-generativeai
-
-# For HTTP requests (used for Groq API)
 requests
-
-# For managing environment variables
 python-dotenv
-
-# Utility
-numpy
